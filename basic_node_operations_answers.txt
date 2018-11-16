@@ -1,0 +1,28 @@
+> Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+Sort - goes through the file, pulls every line, puts it into an array, sorts it, outputs the lines in a string format
+WC - uses a number of functions to get the size of the file in bytes, number of lines, and word count.
+Uniq - same as sort, except we dedupe the array at the end.
+
+> Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+Using the pipe, I grabbed the first file in a directory. Using that as an ouput, I sorted the contents of that file name using the sort command.
+
+> Practice:
+
+let reverseString = (inputString) => {
+
+  let stringArray = inputString.split(" ");
+  let newArray = [];
+
+  stringArray.forEach((item) => {
+
+    let temp = item.split("");
+
+    let reversedString = "";
+    for(let i = temp.length; i>0; i--) reversedString+=temp[i-1];
+
+    newArray.push(reversedString);
+  });
+  return newArray.join(" ");
+}
